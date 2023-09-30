@@ -1,3 +1,5 @@
+love.window.setTitle('Pong')
+
 push = require 'push'
 
 Class = require 'class'
@@ -96,6 +98,15 @@ function love.draw()
     player2:render()
 
     ball:render()
+
+    displayFPS()
     
     push:apply('end')
+end
+
+function displayFPS()
+
+    love.graphics.setFont(smallFont)
+    love.graphics.setColor(0, 255, 0, 255)
+    love.graphics.print('FPS ' .. tostring(love.timer.getFPS()), 5, 5)
 end
