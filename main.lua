@@ -94,8 +94,5 @@ function love.draw()
 
     player1:render()
     player2:render()
-
-    ball:render()
-    
     push:apply('end')
 end
